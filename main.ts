@@ -6,24 +6,30 @@
 import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const SUMMARY = `World news, Wednesday 11 November 2026, most important first, sources named.
+const SUMMARY = `World news, Wednesday 11 November 2026: 12 stories, ranked, each sourced.
 
-1. Ukraine: Ukrainian, Russian and US negotiators began a second day of US-mediated peace talks in Abu Dhabi (France 24). Overnight, Ukrainian drones set fire to Russia's Ust-Luga port area, injuring three, and a Russian strike cut power in parts of Kryvyi Rih; Baltic states issued drone alerts (Reuters via Al Jazeera).
+1. Ukraine: US-brokered Russia-Ukraine talks in Abu Dhabi ended with the war's "largest prisoner exchange" agreed but no peace breakthrough; US envoys meet Putin and Zelensky on Thursday (BBC, Guardian).
 
-2. Iran war: Iran's Revolutionary Guards said at least three ships hit mines and caught fire in the Strait of Hormuz; security chief Mohsen Rezaei said the strait stays shut until the US meets Tehran's seven conditions and denied any talks (Al Jazeera).
+2. Iran war: At a Veterans Day event at Arlington, Trump said the US had "won" and wants "total victory" (CBS). Iran's security chief Mohsen Rezaei said Tehran would strike US bases in Europe if they are used to attack Iran (France 24).
 
-3. Climate: Leaders began two days of speeches at COP31 in Antalya, Türkiye, among them Erdoğan, Lula and Iran's Pezeshkian; Macron, Merz and Meloni stayed away, leaving UK PM Andy Burnham the only G7 leader listed to speak (AFP via RTÉ).
+3. Climate: At the COP31 leaders' summit in Antalya, UN chief Guterres said "the climate crisis is outrunning us" and fossil fuels must go; Australia's Albanese spoke without mentioning them (Al Jazeera, Guardian).
 
-4. Spain: Millions joined the first general strike in 14 years, called by the UGT and CCOO unions over housing costs, weeks before a snap election; unions reported 90% stoppages in car and port sectors (AP via France 24).
+4. Koreas: North Korea published a revised constitution that defines South Korea as a separate state and drops reunification (Korea JoongAng Daily).
 
-5. Health: DR Congo's Ebola outbreak reached 11,042 confirmed cases and at least 5,387 deaths, the second-largest on record, government data showed (Reuters via Al Jazeera).
+5. Spain: Millions joined the first general strike in 14 years, over housing costs, less than three weeks before a snap election (AP, BBC).
 
-6. South Korea: A commuter bus hit 32 vehicles at a traffic light in Seongnam, south of Seoul; 57 people were hurt, nine seriously, fire officials said (Yonhap; AP via DW).
+6. Europe: About 6,300 Italian schools got hoax bomb emails, prompting evacuations; Scotland and Northern Ireland had similar threats (Reuters via Al Jazeera).
 
-7. Asia: China and ASEAN have agreed about 80% of a South China Sea code of conduct but will miss their 2026 deadline, three diplomats told AP.
+7. Indonesia: Vice-President Gibran Rakabuming Raka submitted his resignation after the Supreme Court ruled a school document invalid (BBC).
 
-8. Markets: Anthropic opened an Australian retail offering ahead of its Nasdaq IPO, which seeks up to $64.4bn at $70-78 a share (CNBC).
+8. Health: DR Congo's Ebola outbreak passed 11,042 cases and 5,387 deaths, the health ministry said; Kenya discharged its last patient (AP, BBC).
 
-9. Egypt: Mada Masr editor Lina Attalah faced a criminal retrial in Cairo on charges of operating without a licence and "publishing false news" (AFP via France 24).`;
+9. Violence: Militants killed at least 10 police in Kohat, Pakistan, and ADF rebels killed at least 22 in Congo's Ituri province (AP).
+
+10. Russia/US: Moscow said its ambassador to Washington, Alexander Darchiev, died suddenly at 66 (SCMP).
+
+11. US-China: Rubio and Wang Yi spoke by phone to prepare next week's Xi-Trump meeting in Shenzhen (SCMP).
+
+12. Remembrance: Macron led his last Armistice Day ceremony as president in Paris; tens of thousands marched in Warsaw on Poland's Independence Day (France 24).`;
 
 writeFileSync(join(process.env.MAKEFUN_OUTPUT_DIR ?? '/output', 'entry.txt'), SUMMARY, 'utf8');
