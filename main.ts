@@ -6,30 +6,21 @@
 import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const SUMMARY = `World news, Wed 11 Nov 2026: 12 stories, ranked, each sourced.
-
-1. Ukraine: US-brokered talks in Abu Dhabi ended with the war's "largest prisoner exchange" agreed but no peace breakthrough; US envoys meet Putin and Zelensky on Thursday (BBC, Guardian).
-
-2. Iran war: At Arlington on Veterans Day, Trump said the US had "won" (CBS). Iran's speaker Ghalibaf said Hormuz will "never return" to pre-war status (Al Jazeera); security chief Rezaei threatened US bases in Europe (France 24).
-
-3. US: Democrat Scott Colom unseated Republican Cindy Hyde-Smith in Mississippi's Senate race, the state's first Black senator in over 140 years (BBC).
-
-4. Climate: At COP31's leaders' summit in Antalya, UN chief Guterres said "the climate crisis is outrunning us" and fossil fuels must go (Al Jazeera, Guardian).
-
-5. Spain: Millions joined the first general strike in 14 years, over housing; police put Madrid's march at 120,000, and Barcelona saw clashes (BBC, Euronews).
-
-6. Koreas: North Korea published a revised constitution that defines South Korea as a separate state and drops reunification (JoongAng Daily).
-
-7. Business: Nvidia shares fell over 7% after hours on a WSJ report that its board is preparing to oust CEO Jensen Huang amid affair scandals (CNBC).
-
-8. Indonesia: Vice-President Gibran Rakabuming Raka resigned after the Supreme Court ruled a school document invalid (BBC).
-
-9. Europe: About 6,300 Italian schools got hoax bomb emails, prompting evacuations; Scotland and Northern Ireland had similar threats (Al Jazeera, BBC).
-
-10. Health: DR Congo's Ebola outbreak passed 11,042 cases and 5,387 deaths; Kenya discharged its last patient (AP, BBC).
-
-11. Violence: Militants killed at least 10 police in Kohat, Pakistan; ADF rebels killed at least 22 in Congo's Ituri (AP).
-
-12. Also: Russia's US envoy Alexander Darchiev died at 66 (SCMP); Treasury chief Bessent moved to a military base after Iranian threats (CBS); Armistice Day in Paris, Independence Day march in Warsaw (France 24).`;
+const SUMMARY = `World news, Wed 11 Nov 2026: 15 stories, ranked, sourced.
+1. Ukraine: US-brokered talks in Abu Dhabi agreed the war's "largest prisoner exchange" but no peace deal; US envoys meet Putin and Zelensky Thursday (BBC, Guardian).
+2. Iran war: At Arlington, Trump said the US "won" (CBS); speaker Ghalibaf said Hormuz will "never return" to pre-war status (Al Jazeera); Rezaei threatened US bases in Europe (France 24).
+3. US: Democrat Scott Colom beat Cindy Hyde-Smith in Mississippi: Democrats' 8th Senate flip, its first Black senator since Reconstruction (CBS).
+4. Climate: At COP31, Guterres urged a windfall tax on oil and gas firms; Marshall Islands' leader warned "the world we know is over" (Guardian).
+5. Spain: Millions joined the first general strike in 14 years, over housing; 120,000 marched in Madrid, clashes in Barcelona (BBC).
+6. N. Korea: Its revised constitution calls the South a separate state, dropping reunification (JoongAng Daily).
+7. Nvidia: Shares fell 7%+ after hours on a WSJ report that the board is preparing to oust CEO Jensen Huang amid affair scandals (CNBC).
+8. Indonesia: VP Gibran Rakabuming Raka resigned after a Supreme Court ruling on a school document (BBC).
+9. New York: A Brooklyn building collapse killed at least 8 and injured 17 (CBS).
+10. Ebola: DR Congo's outbreak passed 11,042 cases and 5,387 deaths; Kenya discharged its last patient (AP, BBC).
+11. Violence: A Pakistani Taliban attack in Kohat killed 10 police and 18 militants (Al Jazeera); ADF rebels killed 22+ in Congo's Ituri (AP).
+12. Europe: Hoax bomb emails hit ~6,300 Italian schools, plus Scotland and N. Ireland (Al Jazeera, BBC).
+13. Portugal: Storm Charles shut all schools and cancelled 300+ flights (Al Jazeera).
+14. Lebanon: Over 1 million people face acute food shortages, the UN said (Al Jazeera).
+15. Also: Russia's US ambassador Darchiev died at 66 (SCMP); Bessent moved onto a base over Iranian threats (CBS); Poland's president joined Warsaw's Independence Day march (AP).`;
 
 writeFileSync(join(process.env.MAKEFUN_OUTPUT_DIR ?? '/output', 'entry.txt'), SUMMARY, 'utf8');
